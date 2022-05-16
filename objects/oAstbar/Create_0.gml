@@ -5,16 +5,11 @@ range = 300
 owner_id = noone
 knockback_time = 5;
 charged = false;
-
- //
-
-//alarm[2] = 10;
-
-
-
+alarm[2] = 10;
+	image_xscale = .7;
+	image_yscale = .7;
+	
 function ball_die(){
-
-speed = 0;
-instance_change(oShadowballExpl, false)
-
+	speed = 0;
+	instance_change(oShadowballExpl, false)
 }

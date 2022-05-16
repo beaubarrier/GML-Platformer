@@ -23,38 +23,29 @@ function pState_Astbar(){
 						}
 						if(dir = 180){
 							var _dirr = point_direction(x,y,x-1,y )
-						}
-					
+						}					
 					oMewtwo.abCount = 1
 					oMewtwo.abCount1 = 0
 					oMewtwo.abCount2 = 0
 					oMewtwo.abCount3 = 0
 					oMewtwo.abCount4 = 0
-						var _inst = instance_create_layer(x-50,y-30, "Astbar", oAstbar)
+					oMewtwo.abCount5 = 0
+					
+						var _inst = instance_create_layer(x,y, "Astbar", oAstbar)
 						_inst.charged = chargeShot;
 						with(_inst){
 							
-							speed = other.proj_speed;
+							speed = other.proj_speed+3;
 							direction = _dirr;
 							owner_id = other;
-							//image_angle = -_dirr;
-							
-								
-							
-						
-						
-						}//PROJ END
-						
-				
-				}
-					
-					
+							//image_angle = -_dirr;								
+						}//PROJ END										
+				}										
 			}
 	
 	check_fire();
 	holdFire_amount = 0;
-		
-		
+				
 		if( animation_end()){
 			if(dir = 0){
 				image_xscale = 1;

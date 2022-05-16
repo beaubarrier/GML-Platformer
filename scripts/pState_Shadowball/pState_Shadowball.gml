@@ -28,23 +28,16 @@ function pState_Shadowball(){
 					
 					_inst.charged = chargeShot;
 						with(_inst){
-							speed = other.proj_speed;
+							speed = other.proj_speed-1;
 							direction = _dirr;
 							owner_id = other;
 							//image_angle = -_dirr; 
-						}
-					
-				}
-					
-					
+						}					
+				}										
 			}
 	
 	check_fire();
 	holdFire_amount = 0;
-		
-		//if(){
-		
-		//}
 		if( animation_end()){
 			if(dir = 0){
 				image_xscale = 1;
@@ -55,8 +48,5 @@ function pState_Shadowball(){
 				sprite_index = MewtwoIdle;
 			}
 			state = PSTATE.FREE;
-		}
-		
-		
-		
+		}					
 }

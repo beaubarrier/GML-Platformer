@@ -20,7 +20,7 @@ abCount1 = 0;
 abCount2 = 0;
 abCount3 = 0;
 abCount4 = 0;
-
+abCount5 = 0;
 
 enum PSTATE{
 	FREE,
