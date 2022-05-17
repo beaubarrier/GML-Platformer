@@ -1,7 +1,7 @@
 /// @description AB 1
 // You can write your code in this editor
 if(oMewtwo.abCount = 1){
-	var _inst1 = instance_create_layer(x-20,y, "Astbar", oAstbar)
+	var _inst1 = instance_create_layer(x-15,y, "Astbar", oAstbar)
 		with(_inst1){				
 				speed = oAstbar.speed
 				direction = oAstbar.direction
@@ -9,6 +9,6 @@ if(oMewtwo.abCount = 1){
 				//image_angle = -_dirr; 								
 			}
 }
-alarm[3] = 2
+alarm[3] = 1
 oMewtwo.abCount = 0
 	

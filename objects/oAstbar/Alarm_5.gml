@@ -15,6 +15,6 @@ var _inst4 = instance_create_layer(x+10,y+15, "Astbar", oAstbar)
 		
 	
 }
-alarm[6] = 2
+alarm[6] = 1
 	oMewtwo.abCount4 = 1
 

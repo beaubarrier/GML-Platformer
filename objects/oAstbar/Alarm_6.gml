@@ -9,12 +9,8 @@ var _inst5 = instance_create_layer(x-15,y+25, "Astbar", oAstbar)
 			speed = oAstbar.speed
 			direction = oAstbar.direction
 			owner_id = other;
-			//image_angle = -_dirr; 
-					
-		}
-		
-	
+			//image_angle = -_dirr; 					
+		}			
 }
-
 	oMewtwo.abCount5 = 1
 

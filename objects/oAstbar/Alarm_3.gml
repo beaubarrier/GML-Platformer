@@ -2,7 +2,7 @@
 // You can write your code in this editor
 if(oMewtwo.abCount1 = 0){
 		
-var _inst2 = instance_create_layer(x,y+20, "Astbar", oAstbar)
+var _inst2 = instance_create_layer(x,y+10, "Astbar", oAstbar)
 
 	with(_inst2){
 								
@@ -15,6 +15,6 @@ var _inst2 = instance_create_layer(x,y+20, "Astbar", oAstbar)
 		
 	
 }
-alarm[4] = 2
+alarm[4] = 1
 	oMewtwo.abCount1 = 1
 
