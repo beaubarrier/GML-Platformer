@@ -172,6 +172,10 @@ function pState_Free(){
 		image_index = 0
 		state = PSTATE.ASTBAR;
 	}
+	if((key_spec && key_down )  && !key_jump && !key_jump_held) {
+		image_index = 0
+		state = PSTATE.EXPANDINGFORCE;
+	}
 	if(key_dodge) {
 		image_index = 0;
 		state = PSTATE.DODGE

@@ -46,6 +46,8 @@ if(specHold ){
 		break;
 		case PSTATE.ASTBAR: pState_Astbar();
 		break;
+		case PSTATE.EXPANDINGFORCE: pState_ExpandingForce();
+		break;
 		
 		
 
