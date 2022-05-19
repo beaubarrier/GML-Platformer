@@ -9,7 +9,11 @@ key_atk = keyboard_check_pressed(ord("J"));
 key_spec = keyboard_check_released(ord("K"));
 specHold = keyboard_check(ord("K"));
 key_dodge = keyboard_check(ord("I"));
+key_dodge_held = keyboard_check_pressed(ord("I"))
+key_dodge_rel = keyboard_check_released(ord("I"))
 //curSpri = sprite_get_number(image_index)
+
+
 
 if(specHold ){
 	holdFire_amount +=1;
@@ -48,7 +52,6 @@ if(specHold ){
 		break;
 		case PSTATE.EXPANDINGFORCE: pState_ExpandingForce();
 		break;
-		
-		
+
 
 	}

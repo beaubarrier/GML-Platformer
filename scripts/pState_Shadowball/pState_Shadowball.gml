@@ -1,19 +1,14 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function pState_Shadowball(){
 	hsp = 0;
 	vsp = 0;
-	
 		if(dir = 0 )   {
 			image_xscale = 1
 			sprite_index = MewtwoShadowball;
-		}
-	
+		}	
 		if(dir = 180)  {
 			image_xscale = -1
 			sprite_index = MewtwoShadowball;
-		}
-		
+		}	
 			function check_fire(){
 				if can_fire {
 					can_fire = false;
@@ -34,8 +29,7 @@ function pState_Shadowball(){
 							//image_angle = -_dirr; 
 						}					
 				}										
-			}
-	
+			}	
 	check_fire();
 	holdFire_amount = 0;
 		if( animation_end()){
