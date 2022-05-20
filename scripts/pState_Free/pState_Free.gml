@@ -173,9 +173,17 @@ function pState_Free(){
 			image_index = 0
 			state = PSTATE.EXPANDINGFORCE;
 		}
-		if((key_left || key_right ) && key_spec) {
+		if((key_left || key_right ) && key_spec ) {
 			image_index = 0
-			state = PSTATE.TELEPORT;
+			teleCount = teleCount + 1;
+				if(teleCount <= teleMax){
+				
+					state = PSTATE.TELEPORT;
+				}
+				if(teleCount == teleMax){
+					oMewtwo.alarm[2] = 100;
+				}
+			
 		}
 		//if(key_dodge) {
 		//	image_index = 0;

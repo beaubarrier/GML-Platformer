@@ -13,11 +13,13 @@ key_dodge_held = keyboard_check_pressed(ord("I"))
 key_dodge_rel = keyboard_check_released(ord("I"))
 //curSpri = sprite_get_number(image_index)
 
-
-
-if(specHold ){
+	if(teleCount == teleMax){
+		oMewtwo.alarm[2] = 20;
+	}
+	
+if(specHold){
 	holdFire_amount +=1;
-	if(holdFire_amount >= 40){
+	if(holdFire_amount >= 50){
 		chargeShot = true;
 		//play sound
 	} else {
