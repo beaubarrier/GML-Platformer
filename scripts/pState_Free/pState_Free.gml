@@ -91,35 +91,16 @@ function pState_Free(){
 		}	
 		
 		if(key_dodge_held){
-			sprite_index = MewtwoArmCross
-			var _sheild = instance_create_layer(x,y, "Sheild", oSheild)
-			with(_sheild){
-							speed = 0
-							//direction = _dirr;
-							owner_id = other;
-							//image_angle = -_dirr; 
-						}	
-			vsp = 0
-			hsp = 0
-			walksp = 0
-			
+			image_index= 0
+			state = PSTATE.PROTECT;
 			
 		}
 		if(key_dodge_rel){
-			walksp = 4
-			if(hsp == 0 && vsp == 0 ){
-			switch(dir){
-				case 0:
-					image_xscale = 1;
-					sprite_index = MewtwoIdle
-					break;
-				case 180:
-					image_xscale = -1;
-					sprite_index = MewtwoIdle
-					break;
-			}
+			image_index= 0
+			state = PSTATE.FREE;
+			
 		}
-		}
+		
 						
 		if(specHold){
 			vsp = 0;
@@ -191,6 +172,10 @@ function pState_Free(){
 		if((key_spec && key_down )  && !key_jump && !key_jump_held) {
 			image_index = 0
 			state = PSTATE.EXPANDINGFORCE;
+		}
+		if((key_left || key_right ) && key_spec) {
+			image_index = 0
+			state = PSTATE.TELEPORT;
 		}
 		//if(key_dodge) {
 		//	image_index = 0;

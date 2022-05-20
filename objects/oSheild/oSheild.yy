@@ -1,8 +1,5 @@
 {
-  "spriteId": {
-    "name": "Protect",
-    "path": "sprites/Protect/Protect.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,

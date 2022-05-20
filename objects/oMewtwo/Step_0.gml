@@ -52,6 +52,10 @@ if(specHold ){
 		break;
 		case PSTATE.EXPANDINGFORCE: pState_ExpandingForce();
 		break;
+		case PSTATE.PROTECT: pState_Protect();
+		break;
+		case PSTATE.TELEPORT: pState_Teleport();
+		break;
 
 
 	}
