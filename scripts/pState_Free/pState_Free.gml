@@ -88,6 +88,7 @@ function pState_Free(){
 					break;
 			}
 		}			
+		//Protect - ! need to fix key names
 		if(key_dodge_held){
 			image_index= 0
 			state = PSTATE.PROTECT;
@@ -96,7 +97,8 @@ function pState_Free(){
 		if(key_dodge_rel){
 			image_index= 0
 			state = PSTATE.FREE;		
-		}						
+		}	
+		//Neutral special
 		if(specHold && !key_left && !key_right && !key_up && !key_down){
 			vsp = 0;
 			hsp = 0;
@@ -111,6 +113,7 @@ function pState_Free(){
 				image_xscale = -1
 			}
 		}
+		// Reset walkspeed
 		if(key_spec){walksp = 4}
 		//moving right and not jumping or falling
 		if ((!specHold) && _move > 0 && vsp = 0 && (dir=0) ) {
@@ -122,7 +125,7 @@ function pState_Free(){
 			image_xscale = -1;
 		    sprite_index = MewtwoRun;
 		}
-		//Sets attack state/animation
+		//Attack Inputs
 		if(vsp = 0) && (key_atk) && !specHold && (place_meeting(x, y + 1, oWall)) {
 			image_index = 0;
 			state = PSTATE.JAB;

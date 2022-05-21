@@ -19,7 +19,7 @@ if(teleCount == teleMax){
 	
 if(specHold){
 	holdFire_amount +=1;
-	if(holdFire_amount >= 50){
+	if(holdFire_amount >= 30){
 		chargeShot = true;
 		//play sound
 	} else {
