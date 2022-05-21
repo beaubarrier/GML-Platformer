@@ -21,7 +21,7 @@ chargeShot = false;
 	abCount4 = 0;
 	abCount5 = 0;
 teleCount = 0;
-teleMax = 3;
+teleMax = 2;
 
 enum PSTATE{
 	FREE,
