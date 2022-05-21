@@ -175,13 +175,13 @@ function pState_Free(){
 		}
 		if((key_left || key_right ) && key_spec ) {
 			image_index = 0
-			teleCount = teleCount + 1;
-				if(teleCount <= teleMax){
+			oMewtwo.teleCount = oMewtwo.teleCount + 1;
+				if(oMewtwo.teleCount < oMewtwo.teleMax){
 				
 					state = PSTATE.TELEPORT;
 				}
-				if(teleCount == teleMax){
-					oMewtwo.alarm[2] = 100;
+				if(oMewtwo.teleCount == oMewtwo.teleMax){
+					oMewtwo.alarm[2] = 10000;
 				}
 			
 		}
