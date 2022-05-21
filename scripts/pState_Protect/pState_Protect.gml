@@ -1,7 +1,7 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function pState_Protect(){
-		var _move = key_right - key_left;
+	var _move = key_right - key_left;
 	vsp =  vsp + grv;
 	hsp = _move * walksp;
 		if (place_meeting(x+hsp,y,oWall))
@@ -32,9 +32,7 @@ function pState_Protect(){
 			image_xscale = -1;
 			sprite_index = Protect
 		}
-	
 		if(key_dodge_rel){
-			//if( animation_end()){
 				if(dir = 0){
 					image_xscale = 1;
 					sprite_index = MewtwoIdle;
@@ -44,7 +42,5 @@ function pState_Protect(){
 					sprite_index = MewtwoIdle;
 				}
 				state = PSTATE.FREE;
-			//}
-		}
-						
+		}						
 }

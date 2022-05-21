@@ -1,5 +1,4 @@
 function pState_Free(){
-	// Movement 
 	var _move = key_right - key_left;
 	hsp = _move * walksp;
 	vsp = vsp + grv;
@@ -88,8 +87,7 @@ function pState_Free(){
 					sprite_index = MewtwoIdle
 					break;
 			}
-		}	
-		
+		}			
 		if(key_dodge_held){
 			image_index= 0
 			state = PSTATE.PROTECT;
@@ -97,12 +95,9 @@ function pState_Free(){
 		}
 		if(key_dodge_rel){
 			image_index= 0
-			state = PSTATE.FREE;
-			
-		}
-		
-						
-		if(specHold){
+			state = PSTATE.FREE;		
+		}						
+		if(specHold && !key_left && !key_right && !key_up && !key_down){
 			vsp = 0;
 			hsp = 0;
 			walksp = 0
@@ -161,7 +156,7 @@ function pState_Free(){
 			image_index = 0;
 			state = PSTATE.FOR_TILT;
 		}
-		if((key_spec ) && can_fire = true  && !key_jump && !key_jump_held) {
+		if((key_spec ) && can_fire = true  && !key_jump && !key_jump_held && !key_left && !key_right && !key_up && !key_down) {
 			image_index = 0
 			state = PSTATE.SHADOWBALL;
 		}
@@ -180,9 +175,4 @@ function pState_Free(){
 				state = PSTATE.TELEPORT;
 			}							
 		}
-		
-		//if(key_dodge) {
-		//	image_index = 0;
-		//	state = PSTATE.DODGE
-		//}
 }
