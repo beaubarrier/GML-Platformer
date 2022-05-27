@@ -12,6 +12,7 @@ key_dodge = keyboard_check(ord("I"));
 key_dodge_held = keyboard_check_pressed(ord("I"))
 key_dodge_rel = keyboard_check_released(ord("I"))
 //curSpri = sprite_get_number(image_index)
+nonKeys = oMewtwo.key_up || oMewtwo.key_atk || oMewtwo.key_down || oMewtwo.key_right||oMewtwo.key_left;
 
 if(teleCount == teleMax){
 	oMewtwo.alarm[2] = 100;

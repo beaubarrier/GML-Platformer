@@ -19,15 +19,14 @@ function pState_Shadowball(){
 						if(dir = 180){
 							var _dirr = point_direction(x,y,x-1,y )
 						}
-					var _inst = instance_create_layer(x,y, "Shadowball", oShadowball)
-					
-					_inst.charged = chargeShot;
-						with(_inst){
-							speed = other.proj_speed-1;
-							direction = _dirr;
-							owner_id = other;
-							//image_angle = -_dirr; 
-						}					
+					var _inst = instance_create_layer(x,y, "Shadowball", oShadowball)					
+						_inst.charged = chargeShot;
+							with(_inst){
+								speed = other.proj_speed-1;
+								direction = _dirr;
+								owner_id = other;
+								//image_angle = -_dirr; 
+							}					
 				}										
 			}	
 	check_fire();

@@ -9,7 +9,8 @@ if(key_left){
 if(key_right){
 	dir = 0
 }
-if (oMewtwo.holdFire_amount >= 25) {  image_alpha = .6;}
+
+if ((oMewtwo.holdFire_amount >= 25) && (oMewtwo.specHold) ) {  image_alpha = .6;}
  else {  image_alpha = 0;}
  
  
@@ -25,3 +26,5 @@ if (oMewtwo.holdFire_amount >= 25) {  image_alpha = .6;}
 	x= oMewtwo.x;
 	y=oMewtwo.y;
  }
+ 
+ 

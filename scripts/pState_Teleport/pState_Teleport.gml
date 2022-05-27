@@ -2,10 +2,10 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function pState_Teleport(){
 		if(dir = 0){
-			x += hsp+ 10
+			x += hsp + 8
 		}
 		if(dir = 180){
-			x += hsp + -10
+			x += hsp + -8
 		}
 	vsp = 0
 		if(place_meeting(x + hsp, y, oWall)){ 

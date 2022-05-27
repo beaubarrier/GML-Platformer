@@ -99,7 +99,7 @@ function pState_Free(){
 			state = PSTATE.FREE;		
 		}	
 		//Neutral special
-		if(specHold && !key_left && !key_right && !key_up && !key_down){
+		if(specHold && !oMewtwo.nonKeys){
 			vsp = 0;
 			hsp = 0;
 			walksp = 0
@@ -114,7 +114,10 @@ function pState_Free(){
 			}
 		}
 		// Reset walkspeed
-		if(key_spec){walksp = 4}
+		if(key_spec){
+			oMewtwo.holdFire_amount = 0;
+			walksp = 4
+		}
 		//moving right and not jumping or falling
 		if ((!specHold) && _move > 0 && vsp = 0 && (dir=0) ) {
 			image_xscale = 1; 
