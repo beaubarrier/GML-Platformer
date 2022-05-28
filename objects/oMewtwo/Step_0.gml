@@ -3,16 +3,17 @@ key_up = keyboard_check(ord("W"));
 key_down = keyboard_check(ord("S"));
 key_left = keyboard_check(ord("A"));
 key_right = keyboard_check(ord("D"));
-key_jump = keyboard_check_pressed(ord("L"));
-key_jump_held = keyboard_check(ord("L"));
+	key_jump = keyboard_check_pressed(ord("L"));
+	key_jump_held = keyboard_check(ord("L"));
 key_atk = keyboard_check_pressed(ord("J"));
-key_spec = keyboard_check_released(ord("K"));
-specHold = keyboard_check(ord("K"));
-key_dodge = keyboard_check(ord("I"));
+	key_spec = keyboard_check_released(ord("K"));
+	specHold = keyboard_check(ord("K"));
+	key_specPress = keyboard_check_pressed(ord("K"));
+	key_dodge = keyboard_check(ord("I"));
 key_dodge_held = keyboard_check_pressed(ord("I"))
 key_dodge_rel = keyboard_check_released(ord("I"))
 //curSpri = sprite_get_number(image_index)
-nonKeys = oMewtwo.key_up || oMewtwo.key_atk || oMewtwo.key_down || oMewtwo.key_right||oMewtwo.key_left;
+nonKeys = oMewtwo.key_up || oMewtwo.key_atk || oMewtwo.key_down || oMewtwo.key_right || oMewtwo.key_left;
 
 if(teleCount == teleMax){
 	oMewtwo.alarm[2] = 100;

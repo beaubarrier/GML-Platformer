@@ -1,6 +1,13 @@
 function pState_Shadowball(){
 	hsp = 0;
 	vsp = 0;
+	var _move = key_right - key_left;
+	if(keyboard_check(ord("A"))) {
+			dir = 180
+		}
+		if(keyboard_check(ord("D")) ){
+			dir = 0
+		}
 		if(dir = 0 )   {
 			image_xscale = 1
 			sprite_index = MewtwoShadowball;

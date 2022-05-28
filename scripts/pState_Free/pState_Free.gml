@@ -99,9 +99,9 @@ function pState_Free(){
 			state = PSTATE.FREE;		
 		}	
 		//Neutral special
-		if(specHold && !oMewtwo.nonKeys){
-			vsp = 0;
-			hsp = 0;
+		if(specHold ){
+			//vsp = 0;
+			////hsp = 0;
 			walksp = 0
 			sprite_index = MewtwoCharge
 			if(key_right){
@@ -113,7 +113,7 @@ function pState_Free(){
 				image_xscale = -1
 			}
 		}
-		// Reset walkspeed
+		// Reset walkspeed && shadowball charge gauge
 		if(key_spec){
 			oMewtwo.holdFire_amount = 0;
 			walksp = 4
@@ -162,7 +162,7 @@ function pState_Free(){
 			image_index = 0;
 			state = PSTATE.FOR_TILT;
 		}
-		if((key_spec ) && can_fire = true  && !key_jump && !key_jump_held && !key_left && !key_right && !key_up && !key_down) {
+		if((key_spec ) && can_fire = true  && !key_jump && !key_jump_held && !key_left && !key_right && !key_up && !key_down && !specHold) {
 			image_index = 0
 			state = PSTATE.SHADOWBALL;
 		}
@@ -174,7 +174,7 @@ function pState_Free(){
 			image_index = 0
 			state = PSTATE.EXPANDINGFORCE;
 		}
-		if((key_left || key_right ) && key_spec ) {
+		if((key_left || key_right ) && key_specPress ) {
 			oMewtwo.teleCount = oMewtwo.teleCount + 1;
 			if(oMewtwo.teleCount < 3){
 				image_index = 0
