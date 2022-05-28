@@ -2,7 +2,10 @@
 // You can write your code in this editor
 if(oMewtwo.abCount = 1){
 	var _inst1 = instance_create_layer(x-15,y, "Astbar", oAstbar)
-		with(_inst1){				
+		with(_inst1){
+			if(oMewtwo.dir=180){
+				_inst1.image_xscale= -1
+			}
 				speed = oAstbar.speed
 				direction = oAstbar.direction
 				owner_id = other;

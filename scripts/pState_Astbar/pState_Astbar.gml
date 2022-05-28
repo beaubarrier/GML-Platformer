@@ -19,10 +19,12 @@ function pState_Astbar(){
 					astbar_can_fire = false;
 					alarm[0] = astbar_fire_rate;
 						if(dir = 0){
+							image_xscale = 1
 							var _dirr = point_direction(x,y+1,x+1,y)
 						}
 						if(dir = 180){
-							var _dirr = point_direction(x,y,x-1,y )
+							image_xscale = -1
+							var _dirr = point_direction(x,y+1,x-1,y )
 						}					
 					oMewtwo.abCount = 1
 					oMewtwo.abCount1 = 0
@@ -33,8 +35,13 @@ function pState_Astbar(){
 					
 						var _inst = instance_create_layer(x,y, "Astbar", oAstbar)
 						_inst.charged = chargeShot;
+						if(oMewtwo.dir=180){
+								_inst.image_xscale= -2
+							}
 						with(_inst){
-							
+							if(oMewtwo.dir=180){
+								_inst.image_xscale= -1
+							}
 							speed = other.proj_speed+3;
 							direction = _dirr;
 							owner_id = other;
