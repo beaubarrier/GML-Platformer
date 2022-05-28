@@ -15,9 +15,9 @@ function pState_ExpandingForce(){
 		}
 		
 			function check_fire(){
-				if can_fire {
-					can_fire = false;
-					alarm[0] = fire_rate;
+				if expandingForce_can_fire {
+					expandingForce_can_fire = false;
+					alarm[0] = expandingForce_fire_rate;
 						//if(dir = 0){
 							var _dirr = point_direction(x,y,x-1,y)
 							var _dirr2 = point_direction(x,y,x,y)

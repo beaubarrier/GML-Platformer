@@ -9,8 +9,12 @@ jumpsmax = 2;
 	dir = 0;
 	state = PSTATE.FREE
 	hitByAtk = ds_list_create();
-fire_rate = 50;
+fire_rate = 80;
+astbar_fire_rate = 20;
+expandingForce_fire_rate = 60;
 can_fire = true;
+astbar_can_fire = true;
+expandingForce_can_fire = true;
 proj_speed = 5;
 holdFire_amount = 0;
 chargeShot = false;
@@ -23,21 +27,22 @@ chargeShot = false;
 teleCount = 0;
 teleMax = 2;
 
-enum PSTATE{
-	FREE,
-	JAB,
-	FAIR,
-	DAIR,
-	NAIR,
-	UPAIR,
-	CROUCH_ATK,
-	UP_TILT,
-	FOR_TILT,
-	SHADOWBALL,
-	DODGE,
-	ASTBAR,
-	EXPANDINGFORCE,
-	PROTECT,
-	TELEPORT,
+	enum PSTATE{
+		FREE,
+		JAB,
+		FAIR,
+		DAIR,
+		NAIR,
+		UPAIR,
+		CROUCH_ATK,
+		UP_TILT,
+		FOR_TILT,
+		SHADOWBALL,
+		DODGE,
+		ASTBAR,
+		EXPANDINGFORCE,
+		PROTECT,
+		TELEPORT,
+		SBCHARGE
 	
-}
+	}

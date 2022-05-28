@@ -19,8 +19,7 @@ function pState_Protect(){
 			vsp = 0;
 			hsp=0;
 			walksp=0
-		}
-		
+		}	
 		if(key_dodge_rel){
 			walksp = 4
 		}

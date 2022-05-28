@@ -2,10 +2,11 @@ function pState_Free(){
 	var _move = key_right - key_left;
 	hsp = _move * walksp;
 	vsp = vsp + grv;
-		if(keyboard_check(ord("A")) && !specHold) {
+	
+		if(keyboard_check(ord("A")) ) {
 			dir = 180
 		}
-		if(keyboard_check(ord("D")) && !specHold){
+		if(keyboard_check(ord("D"))){
 			dir = 0
 		}
 		//Prevent collision from happening in the first place!
@@ -42,9 +43,9 @@ function pState_Free(){
 				image_xscale = 1;
 				sprite_index = MewtwoFall
 			}
-				if(_move = 0 && vsp < 0 && dir = 0){
-					image_xscale = 1;
-					sprite_index = MewtwoJump; 
+			if(_move = 0 && vsp < 0 && dir = 0){
+				image_xscale = 1;
+				sprite_index = MewtwoJump; 
 			}
 			//Jump in place facing left
 			if(_move = 0 && vsp > 0 && dir = 180){
@@ -99,32 +100,23 @@ function pState_Free(){
 			state = PSTATE.FREE;		
 		}	
 		//Neutral special
-		if(specHold ){
+		if(specHold && can_fire  && !key_jump && !key_jump_held && !key_left && !key_right && !key_up && !key_down){
 			//vsp = 0;
 			////hsp = 0;
-			walksp = 0
-			sprite_index = MewtwoCharge
-			if(key_right){
-				dir = 0
-				image_xscale = 1
-			}
-			if(key_left){
-				dir = 180
-				image_xscale = -1
-			}
+		state = PSTATE.SBCHARGE
 		}
 		// Reset walkspeed && shadowball charge gauge
-		if(key_spec){
+		if(key_spec ){
 			oMewtwo.holdFire_amount = 0;
 			walksp = 4
 		}
 		//moving right and not jumping or falling
-		if ((!specHold) && _move > 0 && vsp = 0 && (dir=0) ) {
+		if (  _move > 0 && vsp = 0 && (dir=0)  ) {
 			image_xscale = 1; 
 		    sprite_index = MewtwoRun
 		}
 		//moving left and not jumping or falling
-		if ((!specHold) && _move < 0 && vsp = 0 && (dir=180) ) {
+		if ( _move < 0 && vsp = 0 && (dir=180)  ) {
 			image_xscale = -1;
 		    sprite_index = MewtwoRun;
 		}
@@ -162,15 +154,15 @@ function pState_Free(){
 			image_index = 0;
 			state = PSTATE.FOR_TILT;
 		}
-		if((key_spec ) && can_fire = true  && !key_jump && !key_jump_held && !key_left && !key_right && !key_up && !key_down && !specHold) {
-			image_index = 0
-			state = PSTATE.SHADOWBALL;
-		}
-		if((key_spec && key_up )  && !key_jump && !key_jump_held) {
+		//if((key_spec ) && can_fire = true  && !key_jump && !key_jump_held && !key_left && !key_right && !key_up && !key_down && !specHold) {
+		//	image_index = 0
+		//	state = PSTATE.SHADOWBALL;
+		//}
+		if((key_spec && key_up && astbar_can_fire )  && !key_jump && !key_jump_held) {
 			image_index = 0
 			state = PSTATE.ASTBAR;
 		}
-		if((key_spec && key_down )  && !key_jump && !key_jump_held) {
+		if((key_spec && key_down && expandingForce_can_fire)  && !key_jump && !key_jump_held) {
 			image_index = 0
 			state = PSTATE.EXPANDINGFORCE;
 		}

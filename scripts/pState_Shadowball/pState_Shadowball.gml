@@ -1,7 +1,6 @@
 function pState_Shadowball(){
 	hsp = 0;
 	vsp = 0;
-	var _move = key_right - key_left;
 	if(keyboard_check(ord("A"))) {
 			dir = 180
 		}

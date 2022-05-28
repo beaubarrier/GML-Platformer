@@ -6,7 +6,7 @@ owner_id = noone
 knockback_time = 5;
 charged = false;
 alarm[1] = 1; //
-
+oShadowball.speed = oShadowball.speed - .5
 function ball_die(){
 
 speed = 0;

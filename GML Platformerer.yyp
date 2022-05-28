@@ -57,6 +57,7 @@
     {"id":{"name":"LinkUpAtk","path":"sprites/LinkUpAtk/LinkUpAtk.yy",},"order":17,},
     {"id":{"name":"eState_Wander","path":"scripts/eState_Wander/eState_Wander.yy",},"order":4,},
     {"id":{"name":"MewtwoFlurry","path":"sprites/MewtwoFlurry/MewtwoFlurry.yy",},"order":3,},
+    {"id":{"name":"pState_sbCharge","path":"scripts/pState_sbCharge/pState_sbCharge.yy",},"order":4,},
     {"id":{"name":"MewtwoFtilt","path":"sprites/MewtwoFtilt/MewtwoFtilt.yy",},"order":5,},
     {"id":{"name":"MewtwoUtilt","path":"sprites/MewtwoUtilt/MewtwoUtilt.yy",},"order":4,},
     {"id":{"name":"MewtwoCharge","path":"sprites/MewtwoCharge/MewtwoCharge.yy",},"order":5,},

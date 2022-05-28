@@ -15,9 +15,9 @@ function pState_Astbar(){
 		}
 		
 			function check_fire(){
-				if can_fire {
-					can_fire = false;
-					alarm[0] = fire_rate;
+				if astbar_can_fire {
+					astbar_can_fire = false;
+					alarm[0] = astbar_fire_rate;
 						if(dir = 0){
 							var _dirr = point_direction(x,y+1,x+1,y)
 						}
