@@ -3,7 +3,7 @@
     "name": "MewtwoIdle",
     "path": "sprites/MewtwoIdle/MewtwoIdle.yy",
   },
-  "solid": true,
+  "solid": false,
   "visible": true,
   "spriteMaskId": {
     "name": "MewtwoIdle",
@@ -22,7 +22,12 @@
   "physicsFriction": 0.2,
   "physicsStartAwake": true,
   "physicsKinematic": false,
-  "physicsShapePoints": [],
+  "physicsShapePoints": [
+    {"x":21.0,"y":-1.0,},
+    {"x":51.0,"y":-1.0,},
+    {"x":51.0,"y":53.0,},
+    {"x":21.0,"y":53.0,},
+  ],
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
